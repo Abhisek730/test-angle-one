@@ -11,7 +11,7 @@ const REDIRECT_URI = 'https://test-angle-one.onrender.com/callback';
 
 // Step 1: Redirect to Angel One login page
 app.get('/login', (req, res) => {
-  const authUrl = `https://smartapi.angelbroking.com/publisher-login?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&response_type=code`;
+  const authUrl = `https://smartapi.angelbroking.com/publisher-login?api_key=${CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&response_type=code`;
   res.redirect(authUrl);
 });
 
