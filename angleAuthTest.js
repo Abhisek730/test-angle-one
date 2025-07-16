@@ -5,9 +5,9 @@ const app = express();
 const port = 3000;
 
 // Replace with your credentials
-const CLIENT_ID = 'YOUR_CLIENT_ID';
-const CLIENT_SECRET = 'YOUR_CLIENT_SECRET';
-const REDIRECT_URI = 'http://localhost:3000/callback';
+const CLIENT_ID = 'Yl3n7guB';
+const CLIENT_SECRET = 'bb683914-f771-4073-9a33-d53103692446';
+const REDIRECT_URI = 'https://test-angle-one.onrender.com/callback';
 
 // Step 1: Redirect to Angel One login page
 app.get('/login', (req, res) => {
