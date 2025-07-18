@@ -66,7 +66,7 @@ app.get('/profile', (req, res) => {
       'X-ClientLocalIP': '127.0.0.1',
       'X-ClientPublicIP': '127.0.0.1',
       'X-MACAddress': '00:11:22:33:44:55',
-      'X-PrivateKey': CLIENT_SECRET
+      'X-PrivateKey': CLIENT_ID
     }
 
   };
