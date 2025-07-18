@@ -47,7 +47,8 @@ app.get('/profile', (req, res) => {
   }
 
   const options = {
-    hostname: 'apiconnect.angelbroking.com',
+    hostname: 'apiconnect.angelone.in',
+
     path: '/rest/secure/angelbroking/user/v1/getProfile',
     method: 'GET',
     headers: {
@@ -59,9 +60,9 @@ app.get('/profile', (req, res) => {
       'X-ClientLocalIP': '127.0.0.1',
       'X-ClientPublicIP': '127.0.0.1',
       'X-MACAddress': '00:11:22:33:44:55',
-      'X-PrivateKey': CLIENT_SECRET,
-      'api_key': CLIENT_ID
+      'X-PrivateKey': CLIENT_SECRET
     }
+
   };
 
   const request = https.request(options, (response) => {
