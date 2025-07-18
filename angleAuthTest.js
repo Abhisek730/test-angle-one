@@ -29,14 +29,20 @@ app.get('/callback', (req, res) => {
     return res.send('❌ Error: No auth_token received.');
   }
 
+  // Save tokens in memory
   tokenStore.jwtToken = auth_token;
   tokenStore.feedToken = feed_token;
   tokenStore.refreshToken = refresh_token;
 
   res.send(`
-    ✅ Login Successful! Tokens saved.<br><br>
-    👉 <a href="/profile">Test Profile API</a><br>
-    🔁 <a href="/refresh">Refresh Token</a>
+    <h2>✅ Login Successful! Tokens saved.</h2>
+    <h3>🔐 Copy these tokens for manual testing:</h3>
+    <pre><strong>auth_token (JWT):</strong>\n${auth_token}</pre>
+    <pre><strong>feed_token:</strong>\n${feed_token}</pre>
+    <pre><strong>refresh_token:</strong>\n${refresh_token}</pre>
+    <br>
+    <a href="/profile">👉 Test Profile API</a><br>
+    <a href="/refresh">🔁 Refresh Token</a>
   `);
 });
 
